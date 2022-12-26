@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body{
+            display: grid;
+        }
+        input{
+            font-size: 25px;
+            text-align: center;
+            height: 50px;
+            border: solid 2px  rgb(221, 221, 221);
+            background-color:  rgba(221, 221, 221, 0.158) ; 
+            border-radius: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(221, 221, 221);
+            margin: 20px;
+        }
+    </style>
+    <title>EX010</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <div>
+         <input type="number" name="ipt-num" id="ipt-num">
+         <button type="submit" value="Calcular" onclick="calc_vel()">Calcular</button>
+    </div>
+        <p id="res">Resultado</p>
+   <script>
+        function calc_vel(){
+        let vel = document.getElementById("ipt-num")
+        vl = Number(vel.value)
+        let txt = document.getElementById("res")
+        if (vl > 60){
+            txt.innerHTML = "Sua velocidade está acima do permitido você foi <strong>MULTADO</strong>"
+        } else{
+            txt.innerHTML = "A velocidade está dentro do permitido <strong>dirija com segurança</strong>"
+        }
+        }
+
+   </script>
+</body>
+</html>
