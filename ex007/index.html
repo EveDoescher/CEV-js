@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body{
+            display: grid;
+        }
+        input{
+            font-size: 25px;
+            text-align: center;
+            height: 50px;
+            border: solid 2px  rgb(221, 221, 221);
+            background-color:  rgba(221, 221, 221, 0.158) ; 
+            border-radius: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(221, 221, 221);
+            margin: 20px;
+        }
+        #res{
+            text-align: center;
+            font-size: 25px;
+            font-weight: bolder;
+        }
+    </style>
+    <title>EX007</title>
+</head>
+<body>
+    <h1>Somando valores</h1><br>
+
+    <input type="number" name="txtnum1" id="txtnum1"> 
+    <p id="res">+</p>
+    <input type="number" name="txtnum2" id="txtnum2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+   
+    <script>
+        function somar(){
+        let num1 = document.getElementById('txtnum1')
+        let num2 = document.getElementById('txtnum2')
+        let n1 = Number(num1.value)
+        let n2 = Number(num2.value)
+        let result = document.querySelector('div#res')
+        let soma = n1 + n2
+        
+        result.innerHTML = `O Resultado da soma de ${n1} e ${n2} é ${soma}`
+        }
+    </script>
+</body>
+</html>

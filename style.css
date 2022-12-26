@@ -1,0 +1,15 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    padding: 150px;
+    background-color: rgb(154, 180, 201);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(221, 221, 221);
+}
